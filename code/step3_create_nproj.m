@@ -1,4 +1,4 @@
-function fstep3_create_nproj(procestep,sliceorder,varargin)
+function step3_create_nproj(procestep,sliceorder,varargin)
     
     in = finputcheck(varargin, ...
     {'sub'              'cell'      []  [];
