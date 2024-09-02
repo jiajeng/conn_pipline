@@ -1,13 +1,13 @@
 % define step1 using local or nas folder
-local = true;
-check = true;
+local = true; % your data is in local or in nas
+check = true; % check input variable or not 
 o = def_nasorlocal(local,check,true,false);
 
-% step1_convert2nii(o.sub,o.sess,o.round, ...
-%     'folder_nest',o.folder_nest, ...
-%     'subpath',o.subpath, ...
-%     'outsubpath',o.outsubpath, ...
-%     'ftpServer',o.ftpServer);
+step1_convert2nii(o.sub,o.sess,o.round, ...
+    'folder_nest',o.folder_nest, ...
+    'subpath',o.subpath, ...
+    'outsubpath',o.outsubpath, ...
+    'ftpServer',o.ftpServer);
 if ~local
     step2_niiFile2local(o.sess,o.round,o.ftpServer,o.folder_nest,o.outsubpath)
 end
@@ -69,12 +69,12 @@ function o = def_nasorlocal(local_flag,check_par,connF,ISCF)
 
     % ------------------------get subject Name
     % get age 20~30 subject
-    wordname_list = readtable("Q_n84.csv");
-    sub = wordname_list.ID;
+    % wordname_list = readtable("Q_n84.csv");
+    % sub = wordname_list.ID;
 
     % get subject Name from Raw data folder 
-    % sub = {dir(outsubpath).name};
-    % sub = sub(contains(sub,'sub')|contains(sub,'SUB'));
+    sub = {dir(outsubpath).name};
+    sub = sub(contains(sub,'sub')|contains(sub,'SUB'));
     
     % get subject Name from Nas Raw data folder
     % ftpobj = ftp(ftpServer.ip,ftpServer.account,ftpServer.password);
@@ -144,8 +144,6 @@ function o = def_nasorlocal(local_flag,check_par,connF,ISCF)
     cov_data = tmp(:,cov_name);
     o.cov_name = {'AGE','ST_sim','ST_voc','ST_info','IR','SC_action','SC_obj','SC_Pass_acc'};
     o.cov_data = mat2cell(table2array(cov_data),size(cov_data,1),ones(1,size(cov_data,2)));
-    % o.cov_name = {'AGE_center','ST_sim_center','ST_voc_center','ST_info_center','IR_center','SC_action_center','SC_obj_center','SC_Pass_acc_center'};
-    % o.cov_data = mat2cell(table2array(cov_data),size(cov_data,1),ones(1,size(cov_data,2)));
 
     o.conn_fwhm = 8;
     o.conn_strVres = 1;
