@@ -20,7 +20,7 @@ create conn project and select run to which steps, save the progress in conn pro
 
 ## HOW to use
 - open main.m file
-- check this two variable ![image](https://github.com/user-attachments/assets/381b5649-4c90-47d2-9743-ff438580c05c)
+- check this two variable ![image](https://github.com/user-attachments/assets/7344759e-5c6c-474c-a042-93effd439241)
 - change your data variable in function def_nasorlocal(or not change later will let you to double check) ![image](https://github.com/user-attachments/assets/03c3f169-32c3-42cc-9c60-e27843124123)
 - run main.m file
 - pop up this GUI for check the variable is right or not, can change in this GUI
