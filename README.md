@@ -16,6 +16,7 @@ get .nii file to local pc
 create conn project and select run to which steps, save the progress in conn project path .xlsx file.  
 > [!Note]
 > not support change the setup data, like covariate or add subject, in exist conn project.
+> for condition data analysis is not stable, need to check the progress.
 
 ## HOW to use
 - open main.m file
