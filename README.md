@@ -1,4 +1,4 @@
-# conn-ToolBox
+# conn_pipline
 
 ### step 1 &ensp; [Step1_conver2nii.m](/code/step1_convert2nii.m)
 get .IMA file to local pc and convert to .nii file then upload to NAS, and save a MRIinfo.xlsx to store ImageSize,RT,sliceorder ... info.  
