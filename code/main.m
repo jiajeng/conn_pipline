@@ -39,9 +39,9 @@ step3_create_nproj( o.conn_steps,o.conn_slice_order,...
 function o = def_nasorlocal(local_flag,check_par,connF,ISCF)
     % --------------------------define raw data folder direction
     % nas server parameter
-    ftpServer.ip = 'ftp://120.126.102.101/';
-    ftpServer.account = 'jang05213127';
-    ftpServer.password = 'nissen6034';
+    ftpServer.ip = '######';
+    ftpServer.account = '######';
+    ftpServer.password = '#######';
     ftpServer.infolder = 'LabData/jeng/test/RawData'; % Nas Raw Data folder 
                              %   e.x.LabData/廣達人腦健康資料庫
     ftpServer.outfolder = 'LabData/jeng/test/niiData'; % Nas put nii file folder
